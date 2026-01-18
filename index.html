@@ -2,115 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Coach</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Professional Coaching</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
+
 <body>
 
-  <!-- Hero -->
- <header class="hero">
-  <div class="hero-overlay"></div>
-
-  <div class="container hero-content">
-    <h1>Coming soon...</h1>
-    <p>Professional Coach | Leadership • Career • Personal Growth</p>
-    <a href="#contact" class="btn">Book a Session</a>
-  </div>
-</header>
-
-
-
-  <!-- About -->
-  <section class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I am a professional coach dedicated to helping individuals and leaders achieve clarity,
-        confidence, and sustainable success. My coaching approach is structured, empathetic,
-        and results-driven, empowering clients to unlock their full potential.
-      </p>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-flex">
+      <h1 class="logo">LeadNorth Logo</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="btn-small">Book Session</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Services -->
-  <section class="services">
-    <div class="container">
-      <h2>Coaching Services</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Leadership Coaching</h3>
-          <p>Develop executive presence, decision-making, and influence.</p>
-        </div>
-        <div class="card">
-          <h3>Career Coaching</h3>
-          <p>Navigate career transitions, growth, and professional clarity.</p>
-        </div>
-        <div class="card">
-          <h3>Personal Growth</h3>
-          <p>Build confidence, habits, and a balanced mindset.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Hero Section -->
+  <section class="hero">
+  <img
+    src="images\hero.jpg"
+    alt="Professional coaching session"
+    class="hero-img"
+  />
 
-<!-- Certifications -->
-<section class="certifications">
-  <div class="container">
-    <h2>Certifications & Credentials</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Certified Professional Coach (CPC)</h3>
-        <p>International Coaching Federation (ICF)</p>
-      </div>
+  <div class="hero-content">
+    <h2>Unlock Your Full Potential</h2>
+    <p>Professional coaching to help you gain clarity, confidence, and direction.</p>
+    <a
+  href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0SLmU2Ncu9k9H506EXm0-szLvsddeIOtQ9nNlELqIP5NL0yk_3Z3oiAZVWT_rlW_hct3jJPs_B
+"
+  class="btn-primary"
+  target="_blank"
+  rel="noopener"
+>
+  Book a Free Session
+</a>
 
-      <div class="card">
-        <h3>Leadership Development Certification</h3>
-        <p>Center for Executive Coaching</p>
-      </div>
 
-      <div class="card">
-        <h3>Career Transition Specialist</h3>
-        <p>Certified Career Coach Program</p>
-      </div>
-    </div>
   </div>
 </section>
+
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="container">
+      <h3>Coaching Services</h3>
+      <div class="service-grid">
+        <div class="card">
+          <img src="images\service1.jpg" alt="Life coaching session" />
+          <h4>Life Coaching</h4>
+          <p>Find balance, purpose, and motivation to move forward.</p>
+        </div>
+        <div class="card">
+          <img src="images\service2.jpg" alt="Career coaching conversation" />
+          <h4>Career Coaching</h4>
+          <p>Clarify your goals and build a career aligned with your values.</p>
+        </div>
+        <div class="card">
+          <img src="images\service3.jpg" alt="Executive leadership coaching" />
+          <h4>Executive Coaching</h4>
+          <p>Develop leadership skills and strategic thinking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <h3>About the Coach</h3>
+      <img src="images\about.jpg" alt="Coach portrait" class="about-img" />
+      <p>I am a certified professional coach with over 10 years of experience helping individuals and leaders achieve meaningful results.</p>
+    </div>
+  </section>
 
   <!-- Testimonials -->
   <section class="testimonials">
     <div class="container">
-      <h2>Client Testimonials</h2>
-      <div class="grid">
-        <div class="card testimonial">
-          <p>"Coaching sessions helped me gain clarity and confidence in my leadership role."</p>
-          <span>— Senior Manager</span>
-        </div>
-        <div class="card testimonial">
-          <p>"A structured and thoughtful approach that delivered real results."</p>
-          <span>— Startup Founder</span>
-        </div>
-      </div>
+      <h3>What Clients Say</h3>
+      <blockquote>
+        “This coaching transformed my mindset and my career.”
+        <span>– Alex M.</span>
+      </blockquote>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="contact">
     <div class="container">
-      <h2>Get in Touch</h2>
-      <p class="contact-text">Ready to start your coaching journey?</p>
-      <a href="mailto:contact@yourdomain.com" class="btn">Contact Me</a>
+      <h3>Start Your Journey</h3>
+      <p>Book a free consultation today.</p>
+      <a href="#" class="btn-primary">Contact Me</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    © <span id="year"></span> LeadNorth Consulting. All rights reserved.
+  <footer class="footer">
+    <p>© 2026 CoachPro. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>
