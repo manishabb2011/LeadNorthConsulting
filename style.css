@@ -171,19 +171,6 @@ blockquote span {
   padding: 1rem;
 }
 
-.hero {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.hero-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  filter: brightness(60%);
-}
-
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -206,4 +193,15 @@ blockquote span {
   border-radius: 50%;
   object-fit: cover;
   margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 65vh;
+    min-height: 0;
+  }
+
+  .hero-content {
+    padding-top: 3rem;
+  }
 }
