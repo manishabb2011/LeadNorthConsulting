@@ -1,3 +1,6 @@
+/* =========================
+   Base Styles
+   ========================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +9,9 @@
 }
 
 body {
-  color: #1f2933;
+  color: #e5e7eb; /* light text for dark theme */
   line-height: 1.6;
+  background: #020617; /* dark background */
 }
 
 .container {
@@ -16,10 +20,25 @@ body {
   margin: auto;
 }
 
-/* Navigation */
+/* =========================
+   Logo
+   ========================= */
+.logo-img {
+  height: 80px;       /* standard desktop size */
+  width: auto;
+  display: block;
+  border-radius: 12px; /* round corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25); /* subtle shadow */
+}
+
+/* =========================
+   Navigation
+   ========================= */
 .navbar {
-  background: #0f172a;
-  padding: 1rem 0;
+  background: #1e2a44; /* lighter navy blue */
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 .nav-flex {
@@ -29,32 +48,40 @@ body {
 }
 
 .logo {
-  color: #fbbf24;
+  display: inline-flex;
+  align-items: center;
 }
 
 nav a {
-  color: white;
+  color: #f8fafc; /* off-white nav links */
   margin-left: 1.5rem;
   text-decoration: none;
+  font-weight: 500;
 }
 
+nav a:hover {
+  color: #9bd39b; /* logo green hover */
+}
+
+/* Navbar Buttons */
 .btn-small {
-  background: #fbbf24;
+  background: #9bd39b; /* logo green */
   color: #0f172a;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
   height: 80vh;
   min-height: 500px;
   overflow: hidden;
+  margin-top: 0;
 }
 
-/* Image fills entire hero */
 .hero-img {
   position: absolute;
   inset: 0;
@@ -65,25 +92,20 @@ nav a {
   z-index: 1;
 }
 
-/* Content overlays image */
 .hero-content {
   position: relative;
   z-index: 2;
   height: 100%;
-
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* move content up */
+  justify-content: flex-start;
   align-items: center;
-
   text-align: center;
   color: white;
-
-  padding-top: 8vh;   /* controls vertical position */
+  padding-top: 8vh;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 
 .hero-content h2 {
   font-size: clamp(2rem, 4vw, 3rem);
@@ -95,22 +117,22 @@ nav a {
   font-size: 1.1rem;
 }
 
-
 .btn-primary {
   display: inline-block;
   margin-top: 1.5rem;
-  background: #fbbf24;
+  background: #9bd39b; /* logo green */
   color: #0f172a;
   padding: 0.8rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* Services */
+/* Services Section */
 .services {
   padding: 4rem 0;
-  background: #f8fafc;
+  background: #1f2933; /* dark section for contrast */
+  color: #e5e7eb;
 }
 
 .services h3 {
@@ -125,16 +147,39 @@ nav a {
 }
 
 .card {
-  background: white;
+  background: #0f172a;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* About */
+.card h4,
+.card p {
+  color: #e5e7eb;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* About Section */
 .about {
   padding: 4rem 0;
   text-align: center;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.about-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem 0;
 }
 
 /* Testimonials */
@@ -154,13 +199,15 @@ blockquote {
 blockquote span {
   display: block;
   margin-top: 1rem;
-  color: #fbbf24;
+  color: #9bd39b; /* logo green */
 }
 
-/* Contact */
+/* Contact Section */
 .contact {
   padding: 4rem 0;
   text-align: center;
+  background: #111827;
+  color: #e5e7eb;
 }
 
 /* Footer */
@@ -171,6 +218,7 @@ blockquote span {
   padding: 1rem;
 }
 
+/* Hero Overlay */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -179,22 +227,9 @@ blockquote span {
   height: 100%;
 }
 
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.about-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 1rem 0;
-}
-
+/* =========================
+   Responsive
+   ========================= */
 @media (max-width: 768px) {
   .hero {
     height: 65vh;
@@ -203,5 +238,10 @@ blockquote span {
 
   .hero-content {
     padding-top: 3rem;
+  }
+
+  .logo-img {
+    height: 44px;
+    border-radius: 10px;
   }
 }
