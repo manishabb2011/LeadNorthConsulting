@@ -24,7 +24,7 @@ body {
    Logo
    ========================= */
 .logo-img {
-  max-height: 80px;        /* standard desktop size */
+  max-height: 100px;        /* standard desktop size */
   width: auto;
   display: block;
   border-radius: 12px; /* round corners */
